@@ -16,7 +16,7 @@ project "ImPlot"
 
 	includedirs
 	{
-		"%{IncludeDir.ImGui}",
+		"%{vendor.includes.ImGui}",
 	}
 
 	filter "system:windows"
