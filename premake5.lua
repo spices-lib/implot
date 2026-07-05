@@ -1,9 +1,4 @@
-project "ImPlot"
-	kind "StaticLib"
-	language "C++"
-
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+solution.DefineCStaticLibrary("ImPlot", function()
 
 	files
 	{
@@ -22,13 +17,11 @@ project "ImPlot"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++20"
-		staticruntime "On"
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++20"
-		staticruntime "On"
 
 	filter "configurations:Debug"
 		runtime "Debug"
@@ -37,3 +30,5 @@ project "ImPlot"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+
+end)
