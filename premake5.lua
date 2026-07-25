@@ -11,7 +11,7 @@ solution.DefineCStaticLibrary("ImPlot", function()
 
 	includedirs
 	{
-		"%{vendor.includes.ImGui}",
+		vendor.ImGui.includes,
 	}
 
 	filter "system:windows"
