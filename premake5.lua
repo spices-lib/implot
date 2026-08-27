@@ -9,7 +9,7 @@ solution.DefineCStaticLibrary("ImPlot", function()
 		"implot_items.cpp",
 	}
 
-	includedirs
+	externalincludedirs
 	{
 		vendor.ImGui.includes,
 	}
